@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho CRUD</title>
+
+
+    <meta name="description" content="CRUD usuários">
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+
+</head>
+<body>
+    <body>
+        <header>
+            <h1 class="main-heading">Trabalho CRUD</h1>
+        </header>
+    
+        <section class="main-content">
+            <div class="operation-selection">
+                <h2 class="sub-heading">Escolha uma operação:</h2>
+                <ul class="button-list">
+
+                    <li><button class="btnCreate">Criar</button></li>
+                    <li><button class="btnUpdate">Atualizar</button></li>
+                    <li><button class="btnDelete">Excluir</button></li>
+                    <li><button class="btnRead">Ler</button></li>
+
+                </ul>
+            </div>
+    
+            <div class="user-create-container invisible">
+                <h2 class="sub-heading">Insira os detalhes:</h2>
+                <form id="create-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br>
+    
+                    <label for="idade">Idade:</label>
+                    <input type="text" id="idade" name="idade" required><br>
+    
+                    <label for="cidade">RG:</label>
+                    <input type="text" id="RG" name="rg" required><br>
+    
+                    <button class="submitCreate submitButton" type="button">Enviar</button>
+                </form>
+
+            </div>
+    
+            <div class="user-update-container invisible">
+                <h2 class="sub-heading">Atualize os detalhes:</h2>
+                <form id="update-form">
+                    <label for="idUpdate">ID:</label>
+                    <input type="text" id="idUpdate" name="id" required><br>
+    
+                    <label for="idadeUpdate">Idade:</label>
+                    <input type="text" id="idadeUpdate" name="idade" required><br>
+    
+                    <label for="cidadeUpdate">RG:</label>
+                    <input type="text" id="rgUpdate" name="rg" required><br>
+    
+                    <button class="submitUpdate submitButton" type="button">Enviar</button>
+                </form>
+
+            </div>
+    
+            <div class="user-delete-container invisible">
+                <h2 class="sub-heading">Digite o ID para excluir:</h2>
+                <form id="delete-form">
+                    <label for="deleteId">ID:</label>
+                    <input type="text" id="deleteId" name="id" required><br>
+                    <button class="submitDelete submitButton" type="button">Enviar</button>
+                </form>
+
+            </div>
+    
+            <div class="user-read-container invisible">
+                <h2 class="sub-heading">Lista de Usuários:</h2>
+                <table id="userTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>RG</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList"></tbody>
+                </table>
+            </div>
+        </section>
+    
+        <footer>
+            <a href="index.html" id="backHome" class="floating-button invisible">
+                <img src="./images/back.png" alt="Home" width="30" height="30">
+            </a>
+        </footer>
+    
+        <div id="dateText" style="display: none;"></div>
+
+        <script type="module" src="main.js"></script>
+        <script type="module" src="order.js"></script>
+    </body>
+</body>
+</html>
